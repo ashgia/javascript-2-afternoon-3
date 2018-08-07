@@ -122,8 +122,17 @@ contains(names, 'Colt', function(result){
   Write a function called uniq that takes in an array and a callback function.
   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
 */
+//Code Here
 
-
+function uniq(arr, cb) {
+  var myNames = [];
+  for (var i = 0; i < names.length; i++) {
+    if (!myNames.includes(names[i])) {
+      myNames.push(names[i]);
+    }
+  }
+  cb(myNames);
+}
 
 
 // Do not edit the code below.
@@ -142,7 +151,11 @@ uniq(names, function(uniqArr){
 */
 
 //Code Here 
-
+function each(names,cb){
+  for(i=0;i<names.length;i++){
+    cb(names,names[i])
+  }
+}
 // Do not edit the code below.
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
@@ -157,8 +170,10 @@ each(names, function(item, indice){
   Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
   When the correct user object is found, invoke the callback with the user object as an argument.
 */
-
-// Code here
+//code Here 
+function getUserById(arr,id,callback){
+  if 
+}
 
 // Do not edit the code below.
 var users = [
