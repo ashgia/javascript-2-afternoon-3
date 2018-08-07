@@ -27,7 +27,10 @@
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
-// Code Here 
+function first(array,cb){
+  cb(array[0])
+  }
+
 
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -48,6 +51,9 @@ first(names, function(firstName){
 */
 
 //Code Here
+function last(array,cb){
+  cb(array[array.length-1])
+}
 
 // Do not edit the code below.
 last(names, function(lastName){
@@ -66,6 +72,11 @@ last(names, function(lastName){
 */
 
 //Code Here
+function multiply(num1,num2,cb){
+  cb(num1*num2)
+    
+  
+}
 
 // Do not edit the code below.
 multiply(4, 3, function(answer){
@@ -84,7 +95,14 @@ multiply(4, 3, function(answer){
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-//Code Here 
+//Code Here
+
+function contains(array,name,cb){
+  if(array.includes(name)){
+    cb(true)
+  } 
+  else cb(false)
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -105,7 +123,8 @@ contains(names, 'Colt', function(result){
   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
 */
 
-//Code Here
+
+
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
