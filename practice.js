@@ -124,16 +124,18 @@ contains(names, 'Colt', function(result){
 */
 //Code Here
 
-function uniq(arr, cb) {
-  var myNames = [];
-  for (var i = 0; i < names.length; i++) {
-    if (!myNames.includes(names[i])) {
-      myNames.push(names[i]);
+function uniq(names, cb){
+  var arr = [];
+  for (var i = 0; i < names.length; i++){
+    if (arr.indexOf(names[i]) >= 0){
     }
+    else{
+    arr.push(names[i]);
   }
-  cb(myNames);
 }
-
+names = arr;
+cb(names)
+}
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -151,9 +153,9 @@ uniq(names, function(uniqArr){
 */
 
 //Code Here 
-function each(names,cb){
-  for(i=0;i<names.length;i++){
-    cb(names,names[i])
+function each(array,cb){
+  for(i=0;i<array.length;i++){
+    cb(array[i],i)
   }
 }
 // Do not edit the code below.
@@ -171,8 +173,12 @@ each(names, function(item, indice){
   When the correct user object is found, invoke the callback with the user object as an argument.
 */
 //code Here 
-function getUserById(arr,id,callback){
-  if 
+function getUserById(array,id,cb){
+  for (var i=0;i<array.length;i++){
+    if (id === array[i].id){
+      return cb(arr[i])
+    }
+  }
 }
 
 // Do not edit the code below.
